@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDcs_Rdba97okXg9oD31NjU8dQNG8EX11Q" />
+            android:value="Replace with your google Api key" />
 
         <activity android:name=".RestaurantListActivity"/>
         <activity android:name=".RestaurantMapActivity" />
