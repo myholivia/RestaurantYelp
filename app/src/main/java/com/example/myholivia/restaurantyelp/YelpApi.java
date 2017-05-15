@@ -17,10 +17,10 @@ public class YelpApi {
     private static final String API_HOST = "api.yelp.com";
     private static final String SEARCH_PATH = "/v2/search";
 
-    private static final String CONSUMER_KEY = "Replace with your consumer key";
-    private static final String CONSUMER_SECRET = "Replace with your consumer secret";
-    private static final String TOKEN = "Replace with your token";
-    private static final String TOKEN_SECRET = "Replace with your token secret";
+    private static final String CONSUMER_KEY = "uUx1JXt8jdVYkG8uqrJ4Gw";
+    private static final String CONSUMER_SECRET = "x-JzMLroRjYhdascSzHQCGEoRn8";
+    private static final String TOKEN = "gXrv7_DK3bPSnxQR7cKVmsh2Glzw51ac";
+    private static final String TOKEN_SECRET = "TCHr1MWfZqBTKMZiuPsiaGEdGRk";
 
     private OAuthService service;
     private Token accessToken;

@@ -1,5 +1,6 @@
 package com.example.myholivia.restaurantyelp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 
 
@@ -31,8 +32,16 @@ public class RestaurantListActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_list);
 
-        listFragment = new RestaurantListFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_list_container, listFragment).commit();
+        if (findViewById(R.id.fragment_container) != null) {
+            Intent intent = getIntent();
+            if (intent.getExtras() != null) {
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_list_container, new BackendListFragment()).commit();
+            } else {
+                listFragment = new RestaurantListFragment();
+                getSupportFragmentManager().beginTransaction().add(R.id.fragment_list_container, listFragment).commit();
+            }
+        }
 
         new AsyncTask<Void, Void, Void>() {
             @Override
@@ -43,12 +52,6 @@ public class RestaurantListActivity extends AppCompatActivity
 
             }
         }.execute();
-
-        if (findViewById(R.id.fragment_container) != null) {
-            listFragment =  new RestaurantListFragment();
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_list_container, listFragment).commit();
-        }
 
 
     }
